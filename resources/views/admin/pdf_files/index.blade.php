@@ -86,6 +86,7 @@
                         <th scope="col" width="5%">#</th>
                         <th scope="col" width="15%">File Name</th>
                         <th scope="col" width="30%">Course Name</th>
+                        <th scope="col" width="10%">Category</th>
                         <!-- <th scope="col">Description</th> -->
                         <!-- <th scope="col" width="10%">Status</th> -->
                         <th scope="col" class="text-center" width="20%">Action</th>
@@ -95,6 +96,7 @@
                         <td>{{ $index + 1 }}</td>
                         <td><a href="{{ route('view-pdf', ['filename' => $pdfFile->file_path]) }}" target="_blank" style="color:blue;">{{ $pdfFile->file_name }}</a></td>
                         <td>{{ $pdfFile->course }}</td>
+                        <td>{{ $pdfFile->category }}</td>
                         <!-- <td>
                             <form action="{{ route('quizzes.updateStatus', $pdfFile->id) }}" method="POST">
                                 @csrf
