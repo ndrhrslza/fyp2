@@ -23,10 +23,10 @@
         </div>
 
  @php
-        $pdfForEachChapter = App\Models\PdfFile::where('category', 'Visual Notes')->where('chapter', 3)->where('course', 'Control & Audit of Information System')->get();
+        $pdfForEachChapter = App\Models\PdfFile::where('category', 'Reading Notes')->where('chapter', 3)->where('course', 'Control & Audit of Information System')->get();
         @endphp
         @if(isset($pdfForEachChapter) && $pdfForEachChapter->isNotEmpty())
-        <h4>Visual Notes:</h4>
+        <h4>Reading Notes:</h4>
         @foreach ($pdfForEachChapter as $pdfFile)
         <div class="link">
             <i class="fas fa-book"></i>
